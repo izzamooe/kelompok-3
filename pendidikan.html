@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendidikan Anggota Kelompok</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+    <header>
+        <h1>Pendidikan Anggota Kelompok</h1>
+    </header>
+    <main id="main-content">
+        <!-- Konten pendidikan anggota kelompok -->
+    </main>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .member {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .member h2 {
+            margin-top: 0;
+        }
+
+        .member p {
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Panggil fungsi untuk memuat data anggota kelompok
+            loadGroupMembers();
+        });
+
+        function loadGroupMembers() {
+            // Data anggota kelompok (contoh)
+            const groupMembers = [
+                { name: "Damar Galih Aji Pradana", education: "SMA Kedungpring Lamongan" },
+                { name: "Shintia Dewi Rahmawati", education: "MA Matholi'ul Anwar" },
+                { name: "Izzamuddin Royhul Firdaus", education: "SMKN 2 Lamongan" },
+                { name: "Azizah Exil Dinda Pransyah	", education: "MAN 1 Sidoarjo" }
+            ];
+
+            const mainContent = document.getElementById("main-content");
+
+            // Iterasi data anggota kelompok untuk menambahkan informasi ke halaman
+            groupMembers.forEach(member => {
+                const memberDiv = document.createElement("div");
+                memberDiv.classList.add("member");
+
+                const nameHeading = document.createElement("h2");
+                nameHeading.textContent = member.name;
+
+                const educationParagraph = document.createElement("p");
+                educationParagraph.textContent = "Pendidikan: " + member.education;
+
+                memberDiv.appendChild(nameHeading);
+                memberDiv.appendChild(educationParagraph);
+
+                mainContent.appendChild(memberDiv);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
