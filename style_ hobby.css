@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Warna abu-abu */
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Warna hitam */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db; /* Warna biru */
+    color: #fff; /* Warna putih */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e0e0e0; /* Warna abu-abu muda */
+}
+
+tbody tr:hover {
+    background-color: #c5c5c5; /* Warna abu-abu saat hover */
+}
